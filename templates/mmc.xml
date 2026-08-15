@@ -1,0 +1,63 @@
+<Container version="2">
+  <Name>MMC - Media Meta Cleaner</Name>
+  <Repository>galvatrondeva/mmc-media-meta-cleaner:latest</Repository>
+  <Registry>https://hub.docker.com/r/galvatrondeva/mmc-media-meta-cleaner/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+
+  <!-- App icon -->
+  <Icon>https://raw.githubusercontent.com/Phive-5/mmc-media-meta-cleaner/main/icon.png</Icon>
+
+  <!-- Web UI (host port maps to container port 3000) -->
+  <WebUI>http://[IP]:[PORT:14500]</WebUI>
+
+  <Overview>
+    MMC (Media Meta Cleaner) is a web application that removes embedded metadata from video files so media servers like Plex and Jellyfin rely solely on filenames. It scans directories for .mkv, .mp4, .avi, .mov, .wmv and .flv files, probes them for metadata tags (title, subtitle, tags, keywords, comment, description, synopsis), and lets you selectively strip those tags from any combination of files.
+
+    It does NOT rename files, convert formats, or change encoding/quality.
+
+    Features:
+    - Modern web UI (React + Tailwind, dark/light themes, responsive)
+    - Fast (In-Place) and Safe (Copy) processing modes
+    - Post-processing verification - every file is re-probed and reported Verified Clean or FAILED
+    - Real-time progress via WebSocket (scan %, batch %, per-file %)
+    - Pause / Resume / Cancel
+    - In-app log drawer with a final FAILED FILES summary
+
+    After installation, open the WebUI from the Unraid Docker page or at http://[IP]:[PORT:14500]. Map your media directory to /media and the app data folder to /config.
+  </Overview>
+
+  <Description>Web-based media metadata cleaner. Removes metadata from video files (.mkv, .mp4, .avi, .mov, .wmv, .flv) so media servers like Plex and Jellyfin rely solely on filenames. Node.js backend with a modern React UI; supports Fast (In-Place) and Safe (Copy) modes, live progress, post-processing verification, visual folder browser, and a choice of themes.</Description>
+
+  <Support>https://github.com/Phive-5/mmc-media-meta-cleaner/issues</Support>
+  <Project>https://github.com/Phive-5/mmc-media-meta-cleaner</Project>
+
+  <!-- Raw URL to this exact template file -->
+  <TemplateURL>https://raw.githubusercontent.com/Phive-5/mmc-media-meta-cleaner/main/templates/mmc.xml</TemplateURL>
+
+  <!-- Repo readme shown in Community Apps -->
+  <ReadMe>https://raw.githubusercontent.com/Phive-5/mmc-media-meta-cleaner/main/README.md</ReadMe>
+
+  <!-- Category -->
+  <Category>MediaApp:Video:Tools</Category>
+
+  <!-- Extra search terms -->
+  <ExtraSearchTerms>metadata cleaner tags strip plex jellyfin mkv mp4 video remux</ExtraSearchTerms>
+
+  <!-- Minimum Unraid version (no maximum set - image is OS-agnostic) -->
+  <MinVer>6.10</MinVer>
+
+  <!-- Container license -->
+  <License>MIT</License>
+
+  <!-- Screenshots -->
+  <Screenshot>https://raw.githubusercontent.com/Phive-5/mmc-media-meta-cleaner/main/screenshots/ui.png</Screenshot>
+
+  <!-- v2 template config entries -->
+  <Config Name="Media" Target="/media" Default="/mnt/user/media" Mode="rw" Description="Media files to process" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="AppData" Target="/config" Default="/mnt/user/appdata/mmc" Mode="rw" Description="Application configuration storage (settings.json)" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Web Port" Target="3000" Default="14500" Mode="tcp" Description="Web UI (host port maps to container port 3000)" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Timezone" Target="TZ" Default="America/New_York" Description="Container timezone" Type="Variable" Display="always" Required="false" Mask="false"/>
+</Container>

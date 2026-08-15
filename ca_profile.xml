@@ -1,0 +1,21 @@
+<CommunityApplications>
+  <!-- Required profile -->
+  <Profile>
+    MMC (Media Meta Cleaner) removes embedded metadata from video files so media servers like Plex and Jellyfin rely solely on filenames.
+
+    This repository publishes the Unraid Community Apps template for the MMC container image (galvatrondeva/mmc-media-meta-cleaner). The image is a web application - Node.js backend with a modern React UI and a Python media worker - that scans directories for video files (.mkv, .mp4, .avi, .mov, .wmv, .flv), probes them for metadata tags (title, subtitle, tags, keywords, comment, description, synopsis), and provides a checkbox interface to selectively remove metadata.
+
+    Features: Fast (In-Place) and Safe (Copy) processing modes, real-time progress, post-processing verification, pause/resume/cancel, in-app logs, dark/light themes.
+
+    For issues and feature requests, open an issue at https://github.com/Phive-5/mmc-media-meta-cleaner/issues.
+  </Profile>
+
+  <!-- Repository icon -->
+  <Icon>https://raw.githubusercontent.com/Phive-5/mmc-media-meta-cleaner/main/icon.png</Icon>
+
+  <!-- Repository homepage -->
+  <WebPage>https://github.com/Phive-5/mmc-media-meta-cleaner</WebPage>
+
+  <!-- Support -->
+  <Forum>https://github.com/Phive-5/mmc-media-meta-cleaner/issues</Forum>
+</CommunityApplications>
