@@ -53,7 +53,8 @@
   <License>MIT</License>
 
   <!-- Screenshots -->
-  <Screenshot>https://raw.githubusercontent.com/Phive-5/mmc-media-meta-cleaner/main/screenshots/ui.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/Phive-5/mmc-media-meta-cleaner/main/screenshots/MMC-Snap1.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/Phive-5/mmc-media-meta-cleaner/main/screenshots/MMC-Snap2.png</Screenshot>
 
   <!-- v2 template config entries -->
   <Config Name="Media" Target="/media" Default="/mnt/user/media" Mode="rw" Description="Media files to process" Type="Path" Display="always" Required="true" Mask="false"/>
