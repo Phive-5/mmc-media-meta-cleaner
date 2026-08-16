@@ -1,4 +1,4 @@
-# MMC - Media Meta Cleaner
+# MMC Media Meta Cleaner
 
 A Dockerized **web application** that removes embedded metadata from video media files, with a modern React UI. Runs on Node.js in a container and is accessed from any web browser. Designed for Unraid and other Docker-based NAS environments.
 
@@ -16,13 +16,14 @@ It does **not** rename files, convert formats, or change encoding/quality. It on
 - **Post-processing verification** - Every processed file is re-probed and reported as **Verified Clean** or **FAILED - metadata remains** (with remaining tags listed)
 - **In-app logs** - Timestamped, color-coded log drawer with a final FAILED FILES summary
 - **Processing mode selector** - Fast (In-Place) vs Safe (Copy)
+- **Mac turd cleanup** - Scan, log, or delete AppleDouble (`._`) files left behind by macOS so media servers don't get confused
 - **Pause / Resume / Cancel** scanning
 
 ## Install on Unraid
 
 MMC is available in the **Community Applications** store. In the Unraid web UI:
 
-1. Open **Apps** and search for **MMC - Media Meta Cleaner**.
+1. Open **Apps** and search for **MMC Media Meta Cleaner**.
 2. Click **Install**, then configure:
    - **Media** - path to your media directory, mapped to `/media`
    - **AppData** - application storage (settings.json), mapped to `/config`

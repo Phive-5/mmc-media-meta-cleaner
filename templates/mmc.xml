@@ -1,5 +1,5 @@
 <Container version="2">
-  <Name>MMC - Media Meta Cleaner</Name>
+  <Name>MMC Media Meta Cleaner</Name>
   <Repository>galvatrondeva/mmc-media-meta-cleaner:latest</Repository>
   <Registry>https://hub.docker.com/r/galvatrondeva/mmc-media-meta-cleaner/</Registry>
   <Network>bridge</Network>
@@ -11,7 +11,7 @@
   <Icon>https://raw.githubusercontent.com/Phive-5/mmc-media-meta-cleaner/main/icon.png</Icon>
 
   <!-- Web UI (host port maps to container port 3000) -->
-  <WebUI>http://[IP]:[PORT:14500]</WebUI>
+  <WebUI>http://[IP]:[PORT:3000]</WebUI>
 
   <Overview>
     MMC (Media Meta Cleaner) is a web application that removes embedded metadata from video files so media servers like Plex and Jellyfin rely solely on filenames. It scans directories for .mkv, .mp4, .avi, .mov, .wmv and .flv files, probes them for metadata tags (title, subtitle, tags, keywords, comment, description, synopsis), and lets you selectively strip those tags from any combination of files.
@@ -25,11 +25,12 @@
     - Real-time progress via WebSocket (scan %, batch %, per-file %)
     - Pause / Resume / Cancel
     - In-app log drawer with a final FAILED FILES summary
+    - Mac turd handling - scan, log, or delete AppleDouble (._) files left behind by macOS, so Plex/Jellyfin don't get confused
 
-    After installation, open the WebUI from the Unraid Docker page or at http://[IP]:[PORT:14500]. Map your media directory to /media and the app data folder to /config.
+    After installation, open the WebUI from the Unraid Docker page or at the address shown on the container page. Map your media directory to /media and the app data folder to /config.
   </Overview>
 
-  <Description>Web-based media metadata cleaner. Removes metadata from video files (.mkv, .mp4, .avi, .mov, .wmv, .flv) so media servers like Plex and Jellyfin rely solely on filenames. Node.js backend with a modern React UI; supports Fast (In-Place) and Safe (Copy) modes, live progress, post-processing verification, visual folder browser, and a choice of themes.</Description>
+  <Description>Web-based media metadata cleaner. Removes metadata from video files (.mkv, .mp4, .avi, .mov, .wmv, .flv) so media servers like Plex and Jellyfin rely solely on filenames. Node.js backend with a modern React UI; supports Fast (In-Place) and Safe (Copy) modes, live progress, post-processing verification, visual folder browser, Mac turd (AppleDouble) cleanup, and a choice of themes.</Description>
 
   <Support>https://github.com/Phive-5/mmc-media-meta-cleaner/issues</Support>
   <Project>https://github.com/Phive-5/mmc-media-meta-cleaner</Project>
@@ -41,10 +42,10 @@
   <ReadMe>https://raw.githubusercontent.com/Phive-5/mmc-media-meta-cleaner/main/README.md</ReadMe>
 
   <!-- Category -->
-  <Category>MediaApp:Video:Tools</Category>
+  <Category>MediaApp:Video</Category>
 
   <!-- Extra search terms -->
-  <ExtraSearchTerms>metadata cleaner tags strip plex jellyfin mkv mp4 video remux</ExtraSearchTerms>
+  <ExtraSearchTerms>metadata cleaner tags strip plex jellyfin mkv mp4 video remux mac turd appledouble</ExtraSearchTerms>
 
   <!-- Minimum Unraid version (no maximum set - image is OS-agnostic) -->
   <MinVer>6.10</MinVer>
