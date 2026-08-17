@@ -79,6 +79,7 @@ Open `http://<host-ip>:14500/` in any web browser.
 ## Notes
 
 - No authentication is built in; intended for private home networks. Put it behind a reverse proxy if you expose it publicly.
+- v2.01 adds Mac turd (AppleDouble) cleanup, EVA-01 and Plex themes, an inline SVG Apple icon, and renames the container to "MMC Media Meta Cleaner".
 - v2.0 replaces the old desktop edition (v1.x), which streamed a PyQt6 UI over Xpra. This image is a native browser app - no Xpra/Xvfb/PyQt6 layers, smaller image, no remote desktop streaming.
 
 ## Support
