@@ -89,3 +89,7 @@ Open an issue at https://github.com/Phive-5/mmc-media-meta-cleaner/issues for bu
 ## License
 
 MIT
+
+## Unraid Community Applications
+[Install via Unraid CA](https://ca.unraid.net/apps/mmc-media-meta-cleaner-1jbuuaa1v9niti?q=maintainer:%22galvatrondeva%27s+Repository%22&type=all)
+
