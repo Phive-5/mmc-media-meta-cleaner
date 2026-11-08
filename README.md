@@ -2,6 +2,14 @@
 
 A Dockerized **web application** that removes embedded metadata from video media files, with a modern React UI. Runs on Node.js in a container and is accessed from any web browser. Designed for Unraid and other Docker-based NAS environments.
 
+# Other Locations
+
+| Get the app |
+|-------------|
+| [Get it here on Docker Hub](https://hub.docker.com/r/galvatrondeva/mmc-media-meta-cleaner) |
+| [Get it here on Unraids Community App store](https://ca.unraid.net/apps/mmc-media-meta-cleaner-1jbuuaa1v9niti?q=mmc) |
+| Open the Unraid console, Navigate to "APPS" and search for "MMC-Media-Meta-Cleaner" |
+
 ## What it does
 
 MMC scans directories for video files (`.mkv`, `.mp4`, `.avi`, `.mov`, `.wmv`, `.flv`), probes them for metadata tags (title, subtitle, tags, keywords, comment, description, synopsis), and provides a checkbox interface to selectively remove metadata from selected files.
@@ -18,6 +26,14 @@ It does **not** rename files, convert formats, or change encoding/quality. It on
 - **Processing mode selector** - Fast (In-Place) vs Safe (Copy)
 - **Mac turd cleanup** - Scan, log, or delete AppleDouble (`._`) files left behind by macOS so media servers don't get confused
 - **Pause / Resume / Cancel** scanning
+
+## Screenshots
+
+### Main Dashboard & Scanning
+![MMC Main Dashboard](https://raw.githubusercontent.com/Phive-5/mmc-media-meta-cleaner/main/screenshots/MMC-Snap1.png)
+
+### Directory Browser
+![MMC Directory Browser](https://raw.githubusercontent.com/Phive-5/mmc-media-meta-cleaner/main/screenshots/MMC-Snap2.png)
 
 ## Install on Unraid
 
